@@ -1,5 +1,6 @@
-package contactList;
+package appHelperLinkedList;
 
+import contactList.Node;
 import person.Person;
 
 public class LinkedList1 {
