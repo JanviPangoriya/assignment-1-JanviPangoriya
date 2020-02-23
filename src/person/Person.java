@@ -8,4 +8,11 @@ public class Person {
     private LinkedList<String> contacts;
     private String email;
 
+    public Person(String firstName, String lastName, LinkedList<String> contacts, String email) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.contacts = contacts;
+        this.email = email;
+    }
+
 }
