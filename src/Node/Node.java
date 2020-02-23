@@ -4,7 +4,7 @@ import person.Person;
 
 public class Node {
     private Person value;
-    private contactList.Node next;
+    private Node next;
 
     public Node(Person value) {
         this.value = value;
@@ -18,11 +18,11 @@ public class Node {
         this.value = value;
     }
 
-    public contactList.Node getNext() {
+    public Node getNext() {
         return next;
     }
 
-    public void setNext(contactList.Node next) {
+    public void setNext(Node next) {
         this.next = next;
     }
 }

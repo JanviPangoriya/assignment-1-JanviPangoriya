@@ -1,5 +1,7 @@
 package contactList;
 
+import person.Person;
+
 import java.util.LinkedList;
 import java.util.Scanner;
 
