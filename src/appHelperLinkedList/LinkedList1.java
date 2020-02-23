@@ -38,5 +38,25 @@ public class LinkedList1 {
         return response;
     }
 
+    public boolean exist(String firstName) {
+        if (indexOf(firstName) != -1) {
+            return true;
+        }
+        return false;
+    }
+
+    public int indexOf(String firstName) {
+        Node currently = first;
+        int response = 0;
+        while (currently != null) {
+            if (currently.getValue().getFirstName().equals(firstName)) {
+                return response;
+            }
+            response++;
+            currently = currently.getNext();
+        }
+        return -1;
+    }
+
 
 }
