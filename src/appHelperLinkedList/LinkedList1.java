@@ -158,8 +158,4 @@ public class LinkedList1 {
             current = current.getNext();
         }
     }
-
-
-
-
 }
