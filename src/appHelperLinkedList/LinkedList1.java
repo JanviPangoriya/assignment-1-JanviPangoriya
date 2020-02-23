@@ -58,5 +58,48 @@ public class LinkedList1 {
         return -1;
     }
 
+    public void removeFirst() {
+        if (first == last) {
+            first = null;
+            last = null;
+        } else {
+            Node second = first.getNext();
+            first = second;
+        }
+    }
+
+    public void removeLast() {
+        var previousNode = getPreviousNode(last);
+        last = previousNode;
+        last.setNext(null);
+    }
+
+    private Node getPreviousNode(Node node) {
+        var current = first;
+        while (current.getNext() != null) {
+            if (current.getNext() == node) {
+                return current;
+            }
+            current = current.getNext();
+        }
+        return null;
+    }
+
+    public void deleteNode(int position) {
+        if (first == null)
+            return;
+        Node temp = first;
+        if (position == 0) {
+            first = temp.getNext();
+            return;
+        }
+        for (int i = 0; temp != null && i < position - 1; i++)
+            temp = temp.getNext();
+        if (temp == null || temp.getNext() == null)
+            return;
+        Node next = temp.getNext().getNext();
+        temp.setNext(next);
+    }
+
 
 }
